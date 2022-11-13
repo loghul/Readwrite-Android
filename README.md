@@ -66,7 +66,7 @@
 
 
 
-package com.example.readimage;
+package com.example.readwrite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Drawable drawable = getResources().getDrawable(R.drawable.lion);
+        Drawable drawable = getResources().getDrawable(R.drawable.moon);
         bitmap = ((BitmapDrawable) drawable).getBitmap();
         write = findViewById(R.id.button2);
         write.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ContextWrapper cw = new ContextWrapper(getApplicationContext());
                 File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-                File file = new File(directory, "tiger" + ".jpg");
+                File file = new File(directory, "moon" + ".jpg");
                 if (!file.exists()) {
                     Log.d("path", file.toString());
                     FileOutputStream fos = null;
